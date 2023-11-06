@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-header>{{
+    flight.flightNumberPrefix + flight.flightNumber
+  }}</mat-card-header>
+  <mat-card-content>
+    {{ flight.fromIATAAirportCode }} → {{ flight.toIATAAirportCode }}
+    <br />
+    Departure: {{ flight.departureTime.getHours() }}:{{ flight.departureTime.getMinutes() }}, {{ flight.departureTime.toDateString()}}
+    <br />
+    Arrival: {{ flight.arrivalTime.getHours() }}:{{ flight.arrivalTime.getMinutes() }}, {{ flight.arrivalTime.toDateString() }}
+    <br />
+    Aircraft: {{ flight.aircraftRegistration }}
+  </mat-card-content>
+</mat-card>
