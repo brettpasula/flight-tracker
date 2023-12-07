@@ -3,7 +3,6 @@ export default interface IFlight {
     flightNumber: number;
     fromIATAAirportCode: string;
     toIATAAirportCode: string;
-    departureTime: Date;
-    arrivalTime: Date;
+    departureDate: Date;
     aircraftRegistration: string;
 }

@@ -8,4 +8,9 @@ import IFlight from 'src/data/IFlight';
 })
 export class FlightComponent {
   @Input() flight!: IFlight;
+  jetPhotosLink!: string;
+
+  ngOnInit() { 
+    this.jetPhotosLink = "https://www.jetphotos.com/registration/" + this.flight.aircraftRegistration;
+  }
 }
