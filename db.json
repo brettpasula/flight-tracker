@@ -1,0 +1,45 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "flights": [
+      {
+         "flightNumberPrefix":"WS",
+         "flightNumber":3228,
+         "fromIATAAirportCode":"YCD",
+         "toIATAAirportCode":"YYC",
+         "departureDate": "2023-11-4",
+         "aircraftRegistration":"C-GPWE"
+      },
+      {
+         "flightNumberPrefix":"WS",
+         "flightNumber":18,
+         "fromIATAAirportCode":"YYC",
+         "toIATAAirportCode":"LHR",
+         "departureDate": "2023-11-6",
+         "aircraftRegistration":"C-GUDO"
+      },
+      {
+         "flightNumberPrefix":"BA",
+         "flightNumber":464,
+         "fromIATAAirportCode":"LHR",
+         "toIATAAirportCode":"MAD",
+         "departureDate": "2023-11-7",
+         "aircraftRegistration":"C-GUDO"
+      }
+  ]
+}

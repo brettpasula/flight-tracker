@@ -1,13 +1,12 @@
 <mat-card>
   <mat-card-header>{{
     flight.flightNumberPrefix + flight.flightNumber
-  }}</mat-card-header>
+    }}</mat-card-header>
   <mat-card-content>
     {{ flight.fromIATAAirportCode }} → {{ flight.toIATAAirportCode }}
     <br />
     Departure date: {{ flight.departureDate }}
     <br />
     Aircraft: <a [href]="jetPhotosLink">{{ flight.aircraftRegistration }}</a>
-  
   </mat-card-content>
 </mat-card>

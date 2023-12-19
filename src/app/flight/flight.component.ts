@@ -10,7 +10,7 @@ export class FlightComponent {
   @Input() flight!: IFlight;
   jetPhotosLink!: string;
 
-  ngOnInit() { 
+  ngOnInit() {
     this.jetPhotosLink = "https://www.jetphotos.com/registration/" + this.flight.aircraftRegistration;
   }
 }
