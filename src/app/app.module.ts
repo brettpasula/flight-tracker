@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AddFlightComponent } from './add-flight/add-flight.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, FlightComponent, AddFlightComponent],
@@ -20,6 +21,7 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

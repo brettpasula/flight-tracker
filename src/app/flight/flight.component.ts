@@ -12,5 +12,7 @@ export class FlightComponent {
 
   ngOnInit() {
     this.jetPhotosLink = "https://www.jetphotos.com/registration/" + this.flight.aircraftRegistration;
+
+    //var map = leaflet.map('map').setView([51.505, -0.09], 13);
   }
 }
