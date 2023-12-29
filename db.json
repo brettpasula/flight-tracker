@@ -1,21 +1,4 @@
 {
-  "posts": [
-    {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
   "flights": [
       {
          "flightNumberPrefix":"WS",
@@ -34,12 +17,20 @@
          "aircraftRegistration":"C-GUDO"
       },
       {
-         "flightNumberPrefix":"BA",
-         "flightNumber":464,
-         "fromIATAAirportCode":"LHR",
-         "toIATAAirportCode":"MAD",
-         "departureDate": "2023-11-7",
-         "aircraftRegistration":"C-GUDO"
-      }
+         "flightNumberPrefix":"WS",
+         "flightNumber":3582,
+         "fromIATAAirportCode":"YCD",
+         "toIATAAirportCode":"YEG",
+         "departureDate": "2023-12-22",
+         "aircraftRegistration":"C-GLWJ"
+      }, 
+      {
+        "flightNumberPrefix":"WS",
+        "flightNumber":2276,
+        "fromIATAAirportCode":"YYC",
+        "toIATAAirportCode":"SJD",
+        "departureDate": "2023-12-26",
+        "aircraftRegistration":"C-GWBL"
+     }
   ]
 }

@@ -1,7 +1,6 @@
 <mat-card>
-  <mat-card-header>{{
-    flight.flightNumberPrefix + flight.flightNumber
-    }}
+  <mat-card-header>
+    <a [href]="flightRadarTwentyFourLink" target="_blank" rel="noopener noreferrer">{{ flight.flightNumberPrefix + flight.flightNumber }}</a>
     <span id="spacer"></span>
     <button mat-icon-button color="primary" aria-label="Delete flight record" color="warn">
       <mat-icon>delete</mat-icon>
@@ -12,6 +11,6 @@
     <br />
     Departure date: {{ flight.departureDate }}
     <br />
-    Aircraft: <a [href]="jetPhotosLink">{{ flight.aircraftRegistration }}</a>
+    Aircraft: <a [href]="jetPhotosLink" target="_blank" rel="noopener noreferrer">{{ flight.aircraftRegistration }}</a>
   </mat-card-content>
 </mat-card>
