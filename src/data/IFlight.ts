@@ -1,4 +1,5 @@
-export default interface IFlight { 
+export default interface IFlight {
+    id: string, 
     flightNumberPrefix: string;
     flightNumber: number;
     fromIATAAirportCode: string;

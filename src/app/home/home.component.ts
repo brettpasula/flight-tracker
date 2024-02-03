@@ -18,6 +18,12 @@ export class HomeComponent {
   ngOnInit() { 
     this._flightService.getAllFlights().subscribe((flights) => { 
       this.flights = flights;
-    })
+      console.log(flights);
+    });
+  }
+
+  onFlightDeleted($event: string) { 
+    const flightIndexToRemove = this.flights!.findIndex(flight => flight.id === $event);
+    this.flights?.splice(flightIndexToRemove, 1);
   }
 }

@@ -1,1 +1,1 @@
-<flight *ngFor="let flight of flights" [flight]="flight"></flight>
+<flight *ngFor="let flight of flights" [flight]="flight" (flightDeletedEvent)="onFlightDeleted($event)"></flight>

@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import IFlight from 'src/data/IFlight';
+import { FlightService } from 'src/services/flight-service.service';
 
 @Component({
   selector: 'flight',
@@ -8,14 +9,25 @@ import IFlight from 'src/data/IFlight';
 })
 export class FlightComponent {
   @Input() flight!: IFlight;
+  @Output() flightDeletedEvent = new EventEmitter<string>();
   jetPhotosLink!: string;
   flightRadarTwentyFourLinkForFlight!: string;
   flightRadarTwentyFourLinkForAircraft!: string;
-  private flightRadarTwentyFourBaseLink: string = "https://www.flightradar24.com/data/"
+  private _flightRadarTwentyFourBaseLink: string = "https://www.flightradar24.com/data/"
+  private _flightService;
 
+  constructor() { 
+    this._flightService = inject(FlightService);
+  }
+  
   ngOnInit() {
     this.jetPhotosLink = "https://www.jetphotos.com/registration/" + this.flight.aircraftRegistration;
-    this.flightRadarTwentyFourLinkForFlight = this.flightRadarTwentyFourBaseLink + "flights/" + this.flight.flightNumberPrefix + this.flight.flightNumber;
-    this.flightRadarTwentyFourLinkForAircraft = this.flightRadarTwentyFourBaseLink + "aircraft/" + this.flight.aircraftRegistration;
+    this.flightRadarTwentyFourLinkForFlight = this._flightRadarTwentyFourBaseLink + "flights/" + this.flight.flightNumberPrefix + this.flight.flightNumber;
+    this.flightRadarTwentyFourLinkForAircraft = this._flightRadarTwentyFourBaseLink + "aircraft/" + this.flight.aircraftRegistration;
+  }
+
+  onClickDelete() { 
+    this._flightService.deleteFlight(this.flight.id).subscribe(x => console.log(x));
+    this.flightDeletedEvent.emit(this.flight.id);
   }
 }

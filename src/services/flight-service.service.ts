@@ -4,7 +4,7 @@ import IFlight from 'src/data/IFlight';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FlightService {
   private _baseUrl = 'http://localhost:3000/';
@@ -14,16 +14,15 @@ export class FlightService {
     this._httpClient = inject(HttpClient);
   }
 
-  getAllFlights() {
-    return this._httpClient.get<IFlight[]>(
-      this._baseUrl + 'flights'
-    );
+  getAllFlights(): Observable<IFlight[]> {
+    return this._httpClient.get<IFlight[]>(this._baseUrl + 'flights');
   }
 
   addFlight(flight: IFlight): Observable<IFlight> {
-    return this._httpClient.post<IFlight>(
-      this._baseUrl + 'flights',
-      flight
-    );
+    return this._httpClient.post<IFlight>(this._baseUrl + 'flights', flight);
+  }
+
+  deleteFlight(flightId: string) {
+    return this._httpClient.delete(this._baseUrl + 'flights/' + flightId);
   }
 }
