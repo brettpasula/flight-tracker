@@ -12,6 +12,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [AppComponent, FlightComponent, AddFlightComponent, HomeComponent],
@@ -24,7 +28,11 @@ import { HomeComponent } from './home/home.component';
     MatFormFieldModule,
     MatButtonModule,
     MatIconModule,
-    RouterModule
+    RouterModule,
+    MatInputModule,
+    MatToolbarModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent],
