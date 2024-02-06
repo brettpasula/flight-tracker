@@ -22,7 +22,7 @@ export class FlightService {
     return this._httpClient.post<IFlight>(this._baseUrl + 'flights', flight);
   }
 
-  deleteFlight(flightId: string) {
+  deleteFlight(flightId?: string) {
     return this._httpClient.delete(this._baseUrl + 'flights/' + flightId);
   }
 }
