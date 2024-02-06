@@ -4,3 +4,7 @@
     align-items: center;
     margin: 25px;
 }
+
+mat-form-field { 
+    width: 250px;
+}

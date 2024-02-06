@@ -1,28 +1,37 @@
-<div id="form-container">
+<form id="form-container" [formGroup]="form">
   <mat-form-field>
     <mat-label>Flight number prefix</mat-label>
-    <input matInput>
+    <input matInput formControlName="flightNumberPrefix" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Flight number</mat-label>
-    <input matInput>
+    <input matInput formControlName="flightNumber" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>From (AITA airport code)</mat-label>
-    <input matInput>
+    <input matInput formControlName="fromAirport" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>To (AITA airport code)</mat-label>
-    <input matInput>
+    <input matInput formControlName="toAirport" />
   </mat-form-field>
   <mat-form-field>
     <mat-label>Departure date</mat-label>
-    <input matInput [matDatepicker]="picker">
+    <input matInput [matDatepicker]="picker" formControlName="departureDate" />
     <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
   <mat-form-field>
     <mat-label>Aircraft registration</mat-label>
-    <input matInput>
+    <input matInput formControlName="aircraftRegistration" />
   </mat-form-field>
-</div>
+  <button
+    type="submit"
+    mat-raised-button
+    color="primary"
+    [disabled]="form.invalid"
+    (click)="onSubmit()"
+  >
+    Submit
+  </button>
+</form>
