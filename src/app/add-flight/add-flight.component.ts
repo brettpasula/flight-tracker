@@ -5,6 +5,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
+import IFlight from 'src/data/IFlight';
 import { FlightService } from 'src/services/flight-service.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class AddFlightComponent {
   private _flightService: FlightService;
   private _router: Router;
   form: FormGroup;
-  flightNumberPrefix: FormControl;
+  flightNumberPrefix: FormControl<string | null>;
   flightNumber: FormControl<Number | null>;
   fromAirport: FormControl<string | null>;
   toAirport: FormControl<string | null>;
@@ -57,7 +58,15 @@ export class AddFlightComponent {
   }
 
   onSubmit() {
-    this._flightService.addFlight(this.form.value).subscribe({
+    let flight: IFlight = { 
+      flightNumberPrefix: this.flightNumberPrefix.value as string,
+      flightNumber: this.flightNumber.value as number,
+      fromIATAAirportCode: this.fromAirport.value as string,
+      toIATAAirportCode: this.toAirport.value as string,
+      departureDate: this.departureDate.value as Date, 
+      aircraftRegistration: this.aircraftRegistration.value as string,
+    }
+    this._flightService.addFlight(flight).subscribe({
       error: (error) => console.error(error),
       complete: () => this._router.navigate(['/']),
     });
