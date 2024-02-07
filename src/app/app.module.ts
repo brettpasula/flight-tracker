@@ -18,9 +18,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { FlightMapComponent } from './flight-map/flight-map.component';
 
 @NgModule({
-  declarations: [AppComponent, FlightComponent, AddFlightComponent, HomeComponent],
+  declarations: [AppComponent, FlightComponent, AddFlightComponent, HomeComponent, FlightMapComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

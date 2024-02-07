@@ -20,20 +20,25 @@
     </button>
   </mat-card-header>
   <mat-card-content>
-    {{ flight.fromIATAAirportCode }} → {{ flight.toIATAAirportCode }}
-    <br />
-    Departure date: {{ flight.departureDate }}
-    <br />
-    Aircraft: {{ flight.aircraftRegistration }} (<a
-      [href]="jetPhotosLink"
-      target="_blank"
-      rel="noopener noreferrer"
-      >JetPhotos</a
-    >/<a
-      [href]="flightRadarTwentyFourLinkForAircraft"
-      target="_blank"
-      rel="noopener noreferrer"
-      >FlightRadar24</a
-    >)
+    <div class="column left">
+      {{ flight.fromIATAAirportCode }} → {{ flight.toIATAAirportCode }}
+      <br />
+      Departure date: {{ flight.departureDate }}
+      <br />
+      Aircraft: {{ flight.aircraftRegistration }} (<a
+        [href]="jetPhotosLink"
+        target="_blank"
+        rel="noopener noreferrer"
+        >JetPhotos</a
+      >/<a
+        [href]="flightRadarTwentyFourLinkForAircraft"
+        target="_blank"
+        rel="noopener noreferrer"
+        >FlightRadar24</a
+      >)
+    </div>
+    <div class="column right">
+      <flight-map [flight]="flight"></flight-map>
+    </div>
   </mat-card-content>
 </mat-card>
