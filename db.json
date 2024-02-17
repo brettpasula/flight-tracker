@@ -1,36 +1,43 @@
 {
   "flights": [
-      {
-         "flightNumberPrefix":"WS",
-         "flightNumber":3228,
-         "fromIATAAirportCode":"YCD",
-         "toIATAAirportCode":"YYC",
-         "departureDate": "2023-11-4",
-         "aircraftRegistration":"C-GPWE"
-      },
-      {
-         "flightNumberPrefix":"WS",
-         "flightNumber":18,
-         "fromIATAAirportCode":"YYC",
-         "toIATAAirportCode":"LHR",
-         "departureDate": "2023-11-6",
-         "aircraftRegistration":"C-GUDO"
-      },
-      {
-         "flightNumberPrefix":"WS",
-         "flightNumber":3582,
-         "fromIATAAirportCode":"YCD",
-         "toIATAAirportCode":"YEG",
-         "departureDate": "2023-12-22",
-         "aircraftRegistration":"C-GLWJ"
-      }, 
-      {
-        "flightNumberPrefix":"WS",
-        "flightNumber":2276,
-        "fromIATAAirportCode":"YYC",
-        "toIATAAirportCode":"SJD",
-        "departureDate": "2023-12-26",
-        "aircraftRegistration":"C-GWBL"
-     }
+    {
+      "flightNumberPrefix": "WS",
+      "flightNumber": 3228,
+      "fromIATAAirportCode": "YCD",
+      "toIATAAirportCode": "YYC",
+      "departureDate": "2023-11-4",
+      "aircraftRegistration": "C-GPWE"
+    },
+    {
+      "flightNumberPrefix": "WS",
+      "flightNumber": 18,
+      "fromIATAAirportCode": "YYC",
+      "toIATAAirportCode": "LHR",
+      "departureDate": "2023-11-6",
+      "aircraftRegistration": "C-GUDO"
+    },
+    {
+      "flightNumberPrefix": "WS",
+      "flightNumber": 3582,
+      "fromIATAAirportCode": "YCD",
+      "toIATAAirportCode": "YEG",
+      "departureDate": "2023-12-22",
+      "aircraftRegistration": "C-GLWJ"
+    },
+    {
+      "flightNumberPrefix": "WS",
+      "flightNumber": 2276,
+      "fromIATAAirportCode": "YYC",
+      "toIATAAirportCode": "SJD",
+      "departureDate": "2023-12-26",
+      "aircraftRegistration": "C-GWBL"
+    }
+  ],
+  "airports": [
+    { "IATAAirportCode": "YCD", "latitude": 49.05, "longitude": -123.87 },
+    { "IATAAirportCode": "YYC", "latitude": 51.13, "longitude": -114.01 },
+    { "IATAAirportCode": "YEG", "latitude": 53.30, "longitude": -113.58 },
+    { "IATAAirportCode": "LHR", "latitude": 51.47, "longitude": -0.45 },
+    { "IATAAirportCode": "SJD", "latitude": 23.15, "longitude": -109.71 }
   ]
 }
