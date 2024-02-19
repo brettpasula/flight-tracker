@@ -1,6 +1,6 @@
-# FlightTracker
+# (WIP) FlightTracker
 
-An Angular application to record flights I've taken and (more specifically) the aircraft I've travelled on. 
+An Angular application to record flights I've taken and aircraft I've travelled on. 
 
 ## Documentation
 [Angular](https://angular.io/)\
