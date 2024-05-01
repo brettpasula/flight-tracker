@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, Input, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, Input, inject } from '@angular/core';
 import * as L from 'leaflet';
-import { concat, forkJoin, merge } from 'rxjs';
+import { forkJoin } from 'rxjs';
 import IAirport from 'src/data/IAirport';
 import IFlight from 'src/data/IFlight';
 import { AirportService } from 'src/services/airport-service.service';

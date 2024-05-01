@@ -1,6 +1,6 @@
-# (WIP) FlightTracker
+# FlightTracker
 
-An Angular application to record flights I've taken and aircraft I've travelled on. 
+An Angular client application to record flights taken and aircraft travelled on.   
 
 ## Documentation
 [Angular](https://angular.io/)\
@@ -17,4 +17,6 @@ Use `npm start`, the development server will listen on http://localhost:4200 and
 [How to Create a Three Column Layout - W3Schools](https://www.w3schools.com/howto/howto_css_three_columns.asp)\
 [How to Build Maps in Angular with Leaflet - DigitalOcean](https://www.digitalocean.com/community/tutorials/angular-angular-and-leaflet)\
 [Leaflet Provider Demo](https://leaflet-extras.github.io/leaflet-providers/preview/)
+[Zoom to fit all markers in Mapbox or Leaflet - StackOverflow](https://stackoverflow.com/questions/16845614/zoom-to-fit-all-markers-in-mapbox-or-leaflet)
+[forkJoin - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/combination/forkjoin)
 
