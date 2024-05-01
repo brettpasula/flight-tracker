@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, Input, OnInit, inject } from '@angular/core';
 import * as L from 'leaflet';
+import { concat, forkJoin, merge } from 'rxjs';
 import IAirport from 'src/data/IAirport';
 import IFlight from 'src/data/IFlight';
 import { AirportService } from 'src/services/airport-service.service';
@@ -16,7 +17,7 @@ export class FlightMapComponent implements AfterViewInit {
   toAirport!: IAirport;
   private _airportService: AirportService;
 
-  constructor() { 
+  constructor() {
     this._airportService = inject(AirportService);
   }
 
@@ -32,17 +33,18 @@ export class FlightMapComponent implements AfterViewInit {
         'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
     }).addTo(this.map);
 
-    this._airportService
-      .getAirportByIATACode(this.flight.fromIATAAirportCode)
-      .subscribe((airport) => {
-        this.fromAirport = airport[0];
-        L.marker([this.fromAirport.latitude, this.fromAirport.longitude]).addTo(this.map);
-      });
-    this._airportService
-      .getAirportByIATACode(this.flight.toIATAAirportCode)
-      .subscribe((airport) => {
-        this.toAirport = airport[0];
-        L.marker([this.toAirport.latitude, this.toAirport.longitude]).addTo(this.map);
+    forkJoin([
+      this._airportService.getAirportByIATACode(this.flight.fromIATAAirportCode),
+      this._airportService.getAirportByIATACode(this.flight.toIATAAirportCode)
+    ])
+      .subscribe((data) => {
+        this.fromAirport = data[0][0];
+        this.toAirport = data[1][0];
+        var markerGroup = L.featureGroup([
+          L.marker([this.fromAirport.latitude, this.fromAirport.longitude]).addTo(this.map),
+          L.marker([this.toAirport.latitude, this.toAirport.longitude]).addTo(this.map)
+        ]);
+        this.map.fitBounds(markerGroup.getBounds());
       });
   }
 }
