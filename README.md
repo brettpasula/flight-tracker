@@ -1,6 +1,8 @@
 # FlightTracker
 
-An Angular client application to record flights taken and aircraft travelled on.   
+An Angular client application to record flights taken and aircraft travelled on.
+
+![image](https://github.com/brettpasula/flight-tracker/assets/26726097/5f5ff126-1700-4fbf-812c-eb98228da36b)
 
 ## Documentation
 [Angular](https://angular.io/)\
