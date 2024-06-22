@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "flight-tracker:build:production"
+              "buildTarget": "flight-tracker:build:production"
             },
             "development": {
-              "browserTarget": "flight-tracker:build:development"
+              "buildTarget": "flight-tracker:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "flight-tracker:build"
+            "buildTarget": "flight-tracker:build"
           }
         },
         "test": {
