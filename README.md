@@ -5,7 +5,8 @@ An Angular client application to record flights taken and aircraft travelled on.
 ## Documentation
 [Angular](https://angular.io/)\
 [Angular Material](https://material.angular.io/)\
-[Leaflet](https://leafletjs.com/)
+[Leaflet](https://leafletjs.com/)\
+[JSON Server](https://github.com/typicode/json-server)
 
 ## Development server and JSON server
 
@@ -19,4 +20,3 @@ Use `npm start`, the development server will listen on http://localhost:4200 and
 [Leaflet Provider Demo](https://leaflet-extras.github.io/leaflet-providers/preview/)
 [Zoom to fit all markers in Mapbox or Leaflet - StackOverflow](https://stackoverflow.com/questions/16845614/zoom-to-fit-all-markers-in-mapbox-or-leaflet)
 [forkJoin - Learn RxJS](https://www.learnrxjs.io/learn-rxjs/operators/combination/forkjoin)
-
